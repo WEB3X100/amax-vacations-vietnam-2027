@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>AMAX Vacations — Vietnam 2027</title>
+  <meta name="description" content="The first AMAX Vacations departure. Vietnam, January–February 2027. Request a cabin." />
+  <meta name="theme-color" content="#00444D" />
+  <meta name="color-scheme" content="dark" />
+  <meta property="og:title" content="AMAX Vacations — Vietnam 2027" />
+  <meta property="og:description" content="Scroll through the first departure. Ban Gioc, Con Dao, Phu Quoc, then the night. Request a cabin." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/05-the-night.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="icon" href="assets/logo/logo-mark.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/logo/logo-mark.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Playfair+Display:ital,wght@0,500;1,500;1,600&display=swap" rel="stylesheet" />
+  <style>
+    :root, .sw-root {
+      --sw-bg: #00444D;
+      --sw-ink: #F0EFE4;
+      --sw-ink-soft: #D8D4C4;
+      --sw-accent: #CC3366;
+      --sw-gold: #C4A35A;
+      --sw-font-display: "Playfair Display", Georgia, serif;
+      --sw-font-body: Barlow, Helvetica, sans-serif;
+      --sw-focus: #F0EFE4;
+    }
+    html, body { margin: 0; background: #00444D; }
+    html { color-scheme: dark; scrollbar-color: #C4A35A #00353C; }
+    body { touch-action: pan-y; caret-color: #C4A35A; }
+    ::selection { background: #C4A35A; color: #00444D; }
+    .skip {
+      position: absolute; left: 16px; top: 12px; z-index: 80;
+      transform: translateY(-140%);
+      background: #F0EFE4; color: #00444D;
+      font: 600 14px/1 Barlow, sans-serif;
+      padding: 12px 16px; border-radius: 999px;
+      text-decoration: none;
+      min-height: 44px;
+      display: inline-flex; align-items: center;
+    }
+    .skip:focus { transform: none; }
+    .sw-brand {
+      gap: 12px;
+      min-height: 44px;
+      padding: 0;
+      background: none;
+      border: 0;
+      box-shadow: none;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
+    .sw-brand__mark { display: none !important; }
+    .sw-brand__name { display: none !important; }
+    .sw-logo {
+      height: 34px; width: 34px;
+      display: block;
+      flex: 0 0 auto;
+      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.28));
+    }
+    .sw-brand__lockup {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 3px;
+      line-height: 1;
+    }
+    .sw-brand__amax {
+      font: 700 0.78rem/1 Barlow, Helvetica, sans-serif;
+      letter-spacing: 0.28em;
+      color: #F0EFE4;
+      text-transform: uppercase;
+    }
+    .sw-brand__vac {
+      font: italic 500 0.72rem/1 "Playfair Display", Georgia, serif;
+      letter-spacing: 0.16em;
+      color: #C4A35A;
+    }
+    .sw-topbar { padding-top: calc(clamp(14px, 2.4vw, 26px) + env(safe-area-inset-top)); }
+    .sw-nav {
+      background: transparent !important;
+      border: 0 !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      padding: 0 !important;
+      gap: 2px !important;
+    }
+    .sw-nav__item {
+      color: rgba(240, 239, 228, 0.62);
+      background: transparent !important;
+      padding: 8px 10px;
+      font-size: 0.76rem !important;
+    }
+    .sw-nav__item:hover { color: #F0EFE4; }
+    .sw-nav__item.is-active {
+      color: #F0EFE4 !important;
+      background: transparent !important;
+      box-shadow: inset 0 -1px 0 #C4A35A;
+    }
+    .sw-nav__item, .sw-topcta, .sw-btn {
+      min-height: 44px; min-width: 44px;
+      display: inline-flex; align-items: center; justify-content: center;
+      cursor: pointer;
+    }
+    .sw-topcta { display: none !important; }
+    .sw-route__dot { min-width: 44px; min-height: 44px; width: 44px; height: 44px; }
+    .sw-route__label {
+      color: #F0EFE4 !important;
+      background: rgba(0, 68, 77, 0.72) !important;
+      border-color: rgba(196, 163, 90, 0.35) !important;
+    }
+    .sw-route__dot.is-active .sw-route__label { opacity: 0 !important; }
+    .sw-route__dot:hover .sw-route__label,
+    .sw-route__dot:focus-visible .sw-route__label { opacity: 1 !important; }
+    .sw-copylayer::before {
+      width: min(38vw, 540px) !important;
+      background: linear-gradient(90deg, rgba(0, 68, 77, 0.78) 0%, rgba(0, 68, 77, 0.32) 52%, transparent 100%) !important;
+    }
+    .sw-particles { display: none !important; }
+    .sw-copy__num, .sw-copy__eyebrow { display: none !important; }
+    .sw-copy__title {
+      text-wrap: balance;
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(2.6rem, 5.6vw, 4.6rem);
+      line-height: 1.02;
+      letter-spacing: -0.025em;
+      max-width: 11ch;
+    }
+    .sw-copy__body {
+      margin-top: 22px;
+      font-size: 1.125rem;
+      line-height: 1.6;
+      max-width: 34ch;
+      color: #E6E1D0;
+    }
+    .sw-copy__tags li {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #F0EFE4;
+      background: transparent;
+      border: 1px solid rgba(196, 163, 90, 0.55);
+    }
+    .sw-copy:last-child .sw-btn--primary {
+      background: #CC3366;
+      color: #F0EFE4;
+      letter-spacing: 0.08em;
+      padding: 16px 28px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+    }
+    .sw-copy:last-child .sw-copy__title { max-width: 14ch; }
+    .sw-copy:last-child .sw-copy__body {
+      font-size: 0.92rem;
+      line-height: 1.5;
+      max-width: 32ch;
+      letter-spacing: 0.01em;
+    }
+    .sw-brand:focus-visible,
+    .sw-nav__item:focus-visible,
+    .sw-topcta:focus-visible,
+    .sw-route__dot:focus-visible,
+    .sw-btn:focus-visible,
+    .req input:focus-visible,
+    .req textarea:focus-visible,
+    .req button:focus-visible,
+    .req a:focus-visible,
+    .wa:focus-visible,
+    .skip:focus-visible {
+      outline: 3px solid var(--sw-focus);
+      outline-offset: 3px;
+    }
+    .sw-btn--primary:hover { filter: brightness(1.08); }
+    .sw-btn--primary:active { transform: scale(0.98); }
+    @media (max-width: 860px) {
+      .sw-brand { min-height: 44px; gap: 8px; }
+      .sw-logo { height: 28px; width: 28px; }
+      .sw-brand__amax { font-size: 0.68rem; letter-spacing: 0.22em; }
+      .sw-brand__vac { font-size: 0.62rem; }
+      .sw-copy {
+        left: 18px !important;
+        right: 56px !important;
+        bottom: calc(96px + env(safe-area-inset-bottom)) !important;
+        max-width: none !important;
+      }
+      .sw-copy__title {
+        font-size: clamp(1.85rem, 8.6vw, 2.55rem);
+        max-width: 14ch;
+      }
+      .sw-copy:last-child .sw-copy__title { max-width: 13ch; }
+      .sw-copy__body { font-size: 1rem; margin-top: 14px; }
+      .sw-copy:last-child .sw-btn--primary {
+        width: 100%;
+        max-width: 280px;
+        min-height: 48px;
+        margin-top: 4px;
+      }
+      .sw-copylayer::before {
+        width: 100% !important;
+        height: 62% !important;
+        top: auto !important;
+        bottom: 0 !important;
+        background: linear-gradient(0deg, rgba(0, 68, 77, 0.92) 10%, rgba(0, 68, 77, 0.48) 52%, transparent 100%) !important;
+      }
+      .sw-hint { display: none !important; }
+      .wa {
+        min-height: 48px;
+        padding: 12px 16px;
+        font-size: 0.68rem;
+        letter-spacing: 0.06em;
+        bottom: calc(16px + env(safe-area-inset-bottom));
+      }
+      .req__row { grid-template-columns: 1fr; }
+      .req h2 { font-size: 1.7rem; }
+      .req__actions { flex-direction: column; align-items: stretch; }
+      .req__submit, .req__wa, .req__close { width: 100%; }
+    }
+
+    .req[hidden] { display: none !important; }
+    .req {
+      position: fixed; inset: 0; z-index: 70;
+      display: grid; place-items: end center;
+    }
+    .req__scrim {
+      position: absolute; inset: 0;
+      background: rgba(0, 12, 16, 0.62);
+      border: 0; padding: 0; cursor: pointer;
+    }
+    .req__panel {
+      position: relative;
+      width: min(520px, 100%);
+      max-height: min(92dvh, 720px);
+      overflow: auto;
+      background: #01343B;
+      color: #F0EFE4;
+      border-radius: 24px 24px 0 0;
+      padding: 28px 24px calc(28px + env(safe-area-inset-bottom));
+      box-shadow: 0 -20px 60px rgba(0,0,0,0.35);
+    }
+    .req h2 {
+      margin: 0 0 10px;
+      font: italic 500 2.15rem/1.12 "Playfair Display", Georgia, serif;
+      text-wrap: balance;
+      letter-spacing: -0.02em;
+    }
+    .req__lede { margin: 0 0 22px; color: #E6E1D0; line-height: 1.6; font-size: 1.05rem; max-width: 38ch; }
+    .req label { display: block; font: 600 13px/1.2 Barlow, sans-serif; margin: 0 0 6px; }
+    .req__field { margin: 0 0 14px; }
+    .req__row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .req input, .req textarea {
+      width: 100%; box-sizing: border-box;
+      min-height: 44px;
+      border: 1px solid rgba(240,239,228,0.22);
+      background: rgba(0,0,0,0.22);
+      color: #F0EFE4;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font: 400 16px/1.4 Barlow, sans-serif;
+    }
+    .req textarea { min-height: 88px; resize: vertical; }
+    .req__error { color: #FFB4B4; font-size: 0.88rem; margin: 0 0 12px; min-height: 1.2em; }
+    .req__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+    .req__submit, .req__close {
+      min-height: 44px; border-radius: 999px; cursor: pointer; font: 600 0.95rem/1 Barlow, sans-serif;
+    }
+    .req__submit {
+      border: 0; background: #CC3366; color: #F0EFE4; padding: 12px 22px; letter-spacing: 0.08em;
+    }
+    .req__submit[disabled] { opacity: 0.45; cursor: not-allowed; }
+    .req__close {
+      border: 1.5px solid rgba(240,239,228,0.28); background: transparent; color: #F0EFE4; padding: 12px 22px;
+    }
+    .req__ok { margin: 8px 0 0; color: #E6E1D0; }
+    .req__ok a { color: #C4A35A; }
+    .wa {
+      position: fixed;
+      right: max(16px, env(safe-area-inset-right));
+      bottom: calc(20px + env(safe-area-inset-bottom));
+      z-index: 55;
+      min-height: 48px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: #F0EFE4;
+      color: #00444D;
+      font: 700 0.76rem/1 Barlow, Helvetica, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.28);
+    }
+    .wa svg { width: 18px; height: 18px; display: block; }
+    .req__wa {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 44px; border-radius: 999px;
+      background: #F0EFE4; color: #00444D;
+      text-decoration: none; font: 600 0.95rem/1 Barlow, sans-serif;
+      padding: 12px 22px; letter-spacing: 0.06em;
+    }
+    @media (min-width: 720px) {
+      .req { place-items: center; }
+      .req__panel { border-radius: 20px; padding: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#request">Skip to cabin request</a>
+  <a class="wa" id="wa-fab" href="https://wa.me/14377702030?text=Hi%20Maaz%20%E2%80%94%20I%20want%20to%20book%20a%20Vietnam%202027%20cabin." target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#25D366" d="M20.5 3.5A11 11 0 0 0 2.1 17.2L1 23l5.9-1.1A11 11 0 0 0 12 23a11 11 0 0 0 8.5-19.5zM12 21a9 9 0 0 1-4.6-1.3l-.3-.2-3.5.7.7-3.4-.2-.3A9 9 0 1 1 12 21zm5-6.7c-.3-.1-1.6-.8-1.9-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.4 7.4 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5.1-.3c0-.1 0-.3 0-.4s-.6-1.5-.8-2-.4-.5-.6-.5h-.5c-.2 0-.4.1-.6.3s-.8.8-.8 1.9.8 2.2.9 2.3 1.6 2.5 3.9 3.5c.5.2 1 .4 1.3.5.6.2 1.1.2 1.5.1.5-.1 1.6-.6 1.8-1.3s.2-1.1.2-1.2-.2-.2-.4-.3z"/></svg>
+    Book on WhatsApp
+  </a>
+  <div id="top"></div>
+  <main id="world"></main>
+
+  <div class="req" id="request" hidden>
+    <button class="req__scrim" type="button" aria-label="Close request form"></button>
+    <div class="req__panel" role="dialog" aria-modal="true" aria-labelledby="req-title">
+      <h2 id="req-title">Request the first cabin</h2>
+      <p class="req__lede">Vietnam, January–February 2027. Ban Gioc, Con Dao, Phu Quoc. Ask Maaz about the premium discounted package before it sells out.</p>
+      <form id="req-form" novalidate>
+        <div class="req__field">
+          <label for="req-name">Name</label>
+          <input id="req-name" name="name" autocomplete="name" required />
+        </div>
+        <div class="req__field">
+          <label for="req-email">Email</label>
+          <input id="req-email" name="email" type="email" autocomplete="email" inputmode="email" required />
+        </div>
+        <div class="req__row">
+          <div class="req__field">
+            <label for="req-party">Travelers</label>
+            <input id="req-party" name="party" type="number" min="1" max="40" value="2" inputmode="numeric" />
+          </div>
+          <div class="req__field">
+            <label for="req-dates">Preferred dates</label>
+            <input id="req-dates" name="dates" autocomplete="off" placeholder="Jan 2027" />
+          </div>
+        </div>
+        <div class="req__field">
+          <label for="req-note">Anything we should know</label>
+          <textarea id="req-note" name="note" rows="3"></textarea>
+        </div>
+        <p class="req__error" id="req-error" role="alert"></p>
+        <div class="req__actions">
+          <button class="req__submit" type="submit">Send request</button>
+          <a class="req__wa" id="req-wa" href="https://wa.me/14377702030?text=Hi%20Maaz%20%E2%80%94%20I%20want%20to%20book%20a%20Vietnam%202027%20cabin." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <button class="req__close" type="button">Cancel</button>
+        </div>
+        <p class="req__ok" id="req-ok" hidden>If your mail app did not open, write <a href="mailto:info@amaxtravel.ca">info@amaxtravel.ca</a>.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="scrub-engine.js"></script>
+  <script>
+    const WA_HREF = 'https://wa.me/14377702030?text=' + encodeURIComponent(
+      'Hi Maaz — I\'m interested in the Vietnam 2027 premium discounted package before it sells out.\n\n' +
+      'Inquiry Form:\n' +
+      '1. We are XX number of travelers — X Adult, X Child\n' +
+      '2. My preferred travel dates are Jan/Feb XX\n' +
+      '3. Ban Gioc, Con Dao, Phu Quoc, or the full route?\n' +
+      '4. You should also know?\n'
+    );
+    function bindWhatsApp(el) {
+      if (!el) return;
+      el.href = WA_HREF;
+      el.target = '_blank';
+      el.rel = 'noopener noreferrer';
+    }
+    bindWhatsApp(document.getElementById('wa-fab'));
+    bindWhatsApp(document.getElementById('req-wa'));
+
+    function syncWaFab() {
+      const fab = document.getElementById('wa-fab');
+      if (!fab) return;
+      const last = document.querySelector('.sw-copy:last-child');
+      const onLast = last && parseFloat(getComputedStyle(last).opacity || '0') > 0.4;
+      const sheetOpen = document.getElementById('request') && !document.getElementById('request').hidden;
+      fab.style.visibility = (onLast || sheetOpen) ? 'hidden' : 'visible';
+    }
+    window.addEventListener('scroll', () => { requestAnimationFrame(syncWaFab); }, { passive: true });
+    setInterval(syncWaFab, 400);
+
+    mountScrollWorld(document.getElementById('world'), {
+      brand: { name: 'AMAX VACATIONS', href: '#top' },
+      hint: 'scroll to fly in',
+      diveScroll: 2.1,
+      connScroll: 0.8,
+      crossfade: 0.26,
+      atmosphere: false,
+      nav: true,
+      sections: [
+        {
+          id: 'land',
+          label: 'The Green',
+          still: 'assets/01-the-land.jpg?v=fly',
+          clip: 'assets/vid/01-the-land.mp4?v=fly',
+          accent: '#C4A35A',
+          scroll: 2.6,
+          linger: 0,
+          title: 'With me now.',
+          body: 'Follow me for a virtual journey through Vietnam.',
+          tags: ['Cao Bang'],
+        },
+        {
+          id: 'climb',
+          label: 'The Climb',
+          still: 'assets/02-the-coast.jpg?v=ridge',
+          clip: 'assets/vid/02-the-coast.mp4?v=ridge',
+          accent: '#C4A35A',
+          scroll: 2.6,
+          linger: 0,
+          title: 'Up the mountain.',
+          body: 'Con Dao ridge. Keep scrolling. Keep climbing.',
+          tags: ['Con Dao'],
+        },
+        {
+          id: 'summit',
+          label: 'The Summit',
+          still: 'assets/06-the-summit.jpg?v=fly',
+          clip: 'assets/vid/06-the-summit.mp4?v=fly',
+          accent: '#C4A35A',
+          scroll: 2.4,
+          linger: 0.28,
+          title: 'Reach the top.',
+          body: 'Sapa. You arrive. The country opens.',
+          tags: ['Sapa'],
+        },
+        {
+          id: 'house',
+          label: 'The Ride',
+          still: 'assets/03-the-house.jpg?v=red',
+          clip: 'assets/vid/03-the-house.mp4?v=red',
+          accent: '#C4A35A',
+          scroll: 6.8,
+          linger: 0,
+          title: 'Brace yourself for the ride.',
+          body: 'A drone POV through Phu Quoc.',
+          tags: ['Phu Quoc'],
+        },
+        {
+          id: 'invite',
+          label: 'The Night',
+          still: 'assets/05-the-night.jpg?v=clouds3',
+          clip: 'assets/vid/05-the-night.mp4?v=clouds3',
+          accent: '#C4A35A',
+          scroll: 5.2,
+          linger: 0.38,
+          title: 'Enjoy the breathtaking views.',
+          body: 'Act now — before we sell out of this premium discounted package.',
+          tags: ['Jan–Feb 2027'],
+          cta: {
+            primary: { label: 'BOOK ON WHATSAPP', href: WA_HREF }
+          }
+        },
+      ],
+      connectors: [],
+    });
+
+    document.querySelectorAll('a[href^="https://wa.me/"]').forEach(bindWhatsApp);
+
+    const brand = document.querySelector('.sw-brand');
+    if (brand) {
+      brand.setAttribute('aria-label', 'AMAX Vacations');
+      brand.replaceChildren();
+      const img = document.createElement('img');
+      img.className = 'sw-logo';
+      img.src = 'assets/logo/logo-mark.png?v=lux1';
+      img.alt = '';
+      img.width = 34;
+      img.height = 34;
+      const lockup = document.createElement('span');
+      lockup.className = 'sw-brand__lockup';
+      lockup.setAttribute('aria-hidden', 'true');
+      lockup.innerHTML = '<span class="sw-brand__amax">AMAX</span><span class="sw-brand__vac">Vacations</span>';
+      brand.append(img, lockup);
+    }
+
+    document.querySelectorAll('.sw-copy__tags li').forEach((li) => {
+      if (/^\d{1,2}:\d{2}$/.test((li.textContent || '').trim())) li.remove();
+    });
+    const hint = document.querySelector('.sw-hint span');
+    if (hint && window.matchMedia('(hover: none) and (pointer: coarse)').matches) {
+      hint.textContent = 'swipe to fly in';
+    }
+
+    const sheet = document.getElementById('request');
+    const form = document.getElementById('req-form');
+    const err = document.getElementById('req-error');
+    const ok = document.getElementById('req-ok');
+    const firstField = document.getElementById('req-name');
+    const closers = sheet.querySelectorAll('.req__close, .req__scrim');
+    let lastFocus = null;
+
+    function focusables() {
+      return [...sheet.querySelectorAll('a[href], button, input, textarea, select')].filter((el) => !el.disabled && !el.hidden);
+    }
+    function openRequest() {
+      lastFocus = document.activeElement;
+      sheet.hidden = false;
+      document.body.style.overflow = 'hidden';
+      const world = document.getElementById('world');
+      if (world) world.setAttribute('aria-hidden', 'true');
+      firstField.focus();
+    }
+    function closeRequest() {
+      sheet.hidden = true;
+      document.body.style.overflow = '';
+      const world = document.getElementById('world');
+      if (world) world.removeAttribute('aria-hidden');
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+    function isRequestHash() {
+      return (location.hash || '') === '#request';
+    }
+
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('a[href="#request"]');
+      if (!a) return;
+      e.preventDefault();
+      history.replaceState(null, '', '#request');
+      openRequest();
+    });
+    closers.forEach((el) => el.addEventListener('click', () => {
+      if (isRequestHash()) history.replaceState(null, '', '#top');
+      closeRequest();
+    }));
+    document.addEventListener('keydown', (e) => {
+      if (sheet.hidden) return;
+      if (e.key === 'Escape') {
+        if (isRequestHash()) history.replaceState(null, '', '#top');
+        closeRequest();
+        return;
+      }
+      if (e.key !== 'Tab') return;
+      const list = focusables();
+      if (!list.length) return;
+      const first = list[0];
+      const last = list[list.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
+    window.addEventListener('hashchange', () => {
+      if (isRequestHash()) openRequest();
+      else if (!sheet.hidden) closeRequest();
+    });
+    if (isRequestHash()) openRequest();
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      err.textContent = '';
+      ok.hidden = true;
+      const name = document.getElementById('req-name').value.trim();
+      const email = document.getElementById('req-email').value.trim();
+      const party = document.getElementById('req-party').value.trim() || '2';
+      const dates = document.getElementById('req-dates').value.trim() || 'January–February 2027';
+      const note = document.getElementById('req-note').value.trim();
+      if (!name) { err.textContent = 'Add your name so we know who to write back.'; firstField.focus(); return; }
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        err.textContent = 'Add a working email so we can confirm the cabin.';
+        document.getElementById('req-email').focus();
+        return;
+      }
+      const body = [
+        'Vietnam 2027 cabin request',
+        'Name: ' + name,
+        'Email: ' + email,
+        'Travelers: ' + party,
+        'Dates: ' + dates,
+        note ? 'Note: ' + note : ''
+      ].filter(Boolean).join('\n');
+      const href = 'mailto:info@amaxtravel.ca?subject=' +
+        encodeURIComponent('Vietnam 2027 cabin request — ' + name) +
+        '&body=' + encodeURIComponent(body);
+      const btn = form.querySelector('.req__submit');
+      btn.disabled = true;
+      window.location.href = href;
+      ok.hidden = false;
+      setTimeout(() => { btn.disabled = false; }, 1200);
+    });
+  </script>
+</body>
+</html>
