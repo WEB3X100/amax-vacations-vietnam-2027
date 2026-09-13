@@ -3,588 +3,126 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>AMAX Vacations — Vietnam 2027</title>
-  <meta name="description" content="The first AMAX Vacations departure. Vietnam, January–February 2027. Request a cabin." />
-  <meta name="theme-color" content="#00444D" />
-  <meta name="color-scheme" content="dark" />
-  <meta property="og:title" content="AMAX Vacations — Vietnam 2027" />
-  <meta property="og:description" content="Scroll through the first departure. Ban Gioc, Con Dao, Phu Quoc, then the night. Request a cabin." />
+  <title>AMAX Vacations — All-Inclusive Escapes from Toronto</title>
+  <meta name="description" content="Explore curated all-inclusive vacation packages from Toronto and ask an AMAX travel advisor for current availability and pricing." />
+  <meta name="theme-color" content="#003f46" />
+  <meta property="og:title" content="AMAX Vacations — Find Your Escape" />
+  <meta property="og:description" content="Country-by-country vacation inspiration, package previews and personal AMAX travel advice." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/05-the-night.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta property="og:image" content="assets/campaign/amax-hero.jpg" />
   <link rel="icon" href="assets/logo/logo-mark.png" type="image/png" />
-  <link rel="apple-touch-icon" href="assets/logo/logo-mark.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Playfair+Display:ital,wght@0,500;1,500;1,600&display=swap" rel="stylesheet" />
-  <style>
-    :root, .sw-root {
-      --sw-bg: #00444D;
-      --sw-ink: #F0EFE4;
-      --sw-ink-soft: #D8D4C4;
-      --sw-accent: #CC3366;
-      --sw-gold: #C4A35A;
-      --sw-font-display: "Playfair Display", Georgia, serif;
-      --sw-font-body: Barlow, Helvetica, sans-serif;
-      --sw-focus: #F0EFE4;
-    }
-    html, body { margin: 0; background: #00444D; }
-    html { color-scheme: dark; scrollbar-color: #C4A35A #00353C; }
-    body { touch-action: pan-y; caret-color: #C4A35A; }
-    ::selection { background: #C4A35A; color: #00444D; }
-    .skip {
-      position: absolute; left: 16px; top: 12px; z-index: 80;
-      transform: translateY(-140%);
-      background: #F0EFE4; color: #00444D;
-      font: 600 14px/1 Barlow, sans-serif;
-      padding: 12px 16px; border-radius: 999px;
-      text-decoration: none;
-      min-height: 44px;
-      display: inline-flex; align-items: center;
-    }
-    .skip:focus { transform: none; }
-    .sw-brand {
-      gap: 12px;
-      min-height: 44px;
-      padding: 0;
-      background: none;
-      border: 0;
-      box-shadow: none;
-      backdrop-filter: none;
-      -webkit-backdrop-filter: none;
-    }
-    .sw-brand__mark { display: none !important; }
-    .sw-brand__name { display: none !important; }
-    .sw-logo {
-      height: 34px; width: 34px;
-      display: block;
-      flex: 0 0 auto;
-      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.28));
-    }
-    .sw-brand__lockup {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 3px;
-      line-height: 1;
-    }
-    .sw-brand__amax {
-      font: 700 0.78rem/1 Barlow, Helvetica, sans-serif;
-      letter-spacing: 0.28em;
-      color: #F0EFE4;
-      text-transform: uppercase;
-    }
-    .sw-brand__vac {
-      font: italic 500 0.72rem/1 "Playfair Display", Georgia, serif;
-      letter-spacing: 0.16em;
-      color: #C4A35A;
-    }
-    .sw-topbar { padding-top: calc(clamp(14px, 2.4vw, 26px) + env(safe-area-inset-top)); }
-    .sw-nav {
-      background: transparent !important;
-      border: 0 !important;
-      backdrop-filter: none !important;
-      -webkit-backdrop-filter: none !important;
-      padding: 0 !important;
-      gap: 2px !important;
-    }
-    .sw-nav__item {
-      color: rgba(240, 239, 228, 0.62);
-      background: transparent !important;
-      padding: 8px 10px;
-      font-size: 0.76rem !important;
-    }
-    .sw-nav__item:hover { color: #F0EFE4; }
-    .sw-nav__item.is-active {
-      color: #F0EFE4 !important;
-      background: transparent !important;
-      box-shadow: inset 0 -1px 0 #C4A35A;
-    }
-    .sw-nav__item, .sw-topcta, .sw-btn {
-      min-height: 44px; min-width: 44px;
-      display: inline-flex; align-items: center; justify-content: center;
-      cursor: pointer;
-    }
-    .sw-topcta { display: none !important; }
-    .sw-route__dot { min-width: 44px; min-height: 44px; width: 44px; height: 44px; }
-    .sw-route__label {
-      color: #F0EFE4 !important;
-      background: rgba(0, 68, 77, 0.72) !important;
-      border-color: rgba(196, 163, 90, 0.35) !important;
-    }
-    .sw-route__dot.is-active .sw-route__label { opacity: 0 !important; }
-    .sw-route__dot:hover .sw-route__label,
-    .sw-route__dot:focus-visible .sw-route__label { opacity: 1 !important; }
-    .sw-copylayer::before {
-      width: min(38vw, 540px) !important;
-      background: linear-gradient(90deg, rgba(0, 68, 77, 0.78) 0%, rgba(0, 68, 77, 0.32) 52%, transparent 100%) !important;
-    }
-    .sw-particles { display: none !important; }
-    .sw-copy__num, .sw-copy__eyebrow { display: none !important; }
-    .sw-copy__title {
-      text-wrap: balance;
-      font-style: italic;
-      font-weight: 500;
-      font-size: clamp(2.6rem, 5.6vw, 4.6rem);
-      line-height: 1.02;
-      letter-spacing: -0.025em;
-      max-width: 11ch;
-    }
-    .sw-copy__body {
-      margin-top: 22px;
-      font-size: 1.125rem;
-      line-height: 1.6;
-      max-width: 34ch;
-      color: #E6E1D0;
-    }
-    .sw-copy__tags li {
-      font-size: 0.72rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #F0EFE4;
-      background: transparent;
-      border: 1px solid rgba(196, 163, 90, 0.55);
-    }
-    .sw-copy:last-child .sw-btn--primary {
-      background: #CC3366;
-      color: #F0EFE4;
-      letter-spacing: 0.08em;
-      padding: 16px 28px;
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
-    }
-    .sw-copy:last-child .sw-copy__title { max-width: 14ch; }
-    .sw-copy:last-child .sw-copy__body {
-      font-size: 0.92rem;
-      line-height: 1.5;
-      max-width: 32ch;
-      letter-spacing: 0.01em;
-    }
-    .sw-brand:focus-visible,
-    .sw-nav__item:focus-visible,
-    .sw-topcta:focus-visible,
-    .sw-route__dot:focus-visible,
-    .sw-btn:focus-visible,
-    .req input:focus-visible,
-    .req textarea:focus-visible,
-    .req button:focus-visible,
-    .req a:focus-visible,
-    .wa:focus-visible,
-    .skip:focus-visible {
-      outline: 3px solid var(--sw-focus);
-      outline-offset: 3px;
-    }
-    .sw-btn--primary:hover { filter: brightness(1.08); }
-    .sw-btn--primary:active { transform: scale(0.98); }
-    @media (max-width: 860px) {
-      .sw-brand { min-height: 44px; gap: 8px; }
-      .sw-logo { height: 28px; width: 28px; }
-      .sw-brand__amax { font-size: 0.68rem; letter-spacing: 0.22em; }
-      .sw-brand__vac { font-size: 0.62rem; }
-      .sw-copy {
-        left: 18px !important;
-        right: 56px !important;
-        bottom: calc(96px + env(safe-area-inset-bottom)) !important;
-        max-width: none !important;
-      }
-      .sw-copy__title {
-        font-size: clamp(1.85rem, 8.6vw, 2.55rem);
-        max-width: 14ch;
-      }
-      .sw-copy:last-child .sw-copy__title { max-width: 13ch; }
-      .sw-copy__body { font-size: 1rem; margin-top: 14px; }
-      .sw-copy:last-child .sw-btn--primary {
-        width: 100%;
-        max-width: 280px;
-        min-height: 48px;
-        margin-top: 4px;
-      }
-      .sw-copylayer::before {
-        width: 100% !important;
-        height: 62% !important;
-        top: auto !important;
-        bottom: 0 !important;
-        background: linear-gradient(0deg, rgba(0, 68, 77, 0.92) 10%, rgba(0, 68, 77, 0.48) 52%, transparent 100%) !important;
-      }
-      .sw-hint { display: none !important; }
-      .wa {
-        min-height: 48px;
-        padding: 12px 16px;
-        font-size: 0.68rem;
-        letter-spacing: 0.06em;
-        bottom: calc(16px + env(safe-area-inset-bottom));
-      }
-      .req__row { grid-template-columns: 1fr; }
-      .req h2 { font-size: 1.7rem; }
-      .req__actions { flex-direction: column; align-items: stretch; }
-      .req__submit, .req__wa, .req__close { width: 100%; }
-    }
-
-    .req[hidden] { display: none !important; }
-    .req {
-      position: fixed; inset: 0; z-index: 70;
-      display: grid; place-items: end center;
-    }
-    .req__scrim {
-      position: absolute; inset: 0;
-      background: rgba(0, 12, 16, 0.62);
-      border: 0; padding: 0; cursor: pointer;
-    }
-    .req__panel {
-      position: relative;
-      width: min(520px, 100%);
-      max-height: min(92dvh, 720px);
-      overflow: auto;
-      background: #01343B;
-      color: #F0EFE4;
-      border-radius: 24px 24px 0 0;
-      padding: 28px 24px calc(28px + env(safe-area-inset-bottom));
-      box-shadow: 0 -20px 60px rgba(0,0,0,0.35);
-    }
-    .req h2 {
-      margin: 0 0 10px;
-      font: italic 500 2.15rem/1.12 "Playfair Display", Georgia, serif;
-      text-wrap: balance;
-      letter-spacing: -0.02em;
-    }
-    .req__lede { margin: 0 0 22px; color: #E6E1D0; line-height: 1.6; font-size: 1.05rem; max-width: 38ch; }
-    .req label { display: block; font: 600 13px/1.2 Barlow, sans-serif; margin: 0 0 6px; }
-    .req__field { margin: 0 0 14px; }
-    .req__row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .req input, .req textarea {
-      width: 100%; box-sizing: border-box;
-      min-height: 44px;
-      border: 1px solid rgba(240,239,228,0.22);
-      background: rgba(0,0,0,0.22);
-      color: #F0EFE4;
-      border-radius: 12px;
-      padding: 12px 14px;
-      font: 400 16px/1.4 Barlow, sans-serif;
-    }
-    .req textarea { min-height: 88px; resize: vertical; }
-    .req__error { color: #FFB4B4; font-size: 0.88rem; margin: 0 0 12px; min-height: 1.2em; }
-    .req__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
-    .req__submit, .req__close {
-      min-height: 44px; border-radius: 999px; cursor: pointer; font: 600 0.95rem/1 Barlow, sans-serif;
-    }
-    .req__submit {
-      border: 0; background: #CC3366; color: #F0EFE4; padding: 12px 22px; letter-spacing: 0.08em;
-    }
-    .req__submit[disabled] { opacity: 0.45; cursor: not-allowed; }
-    .req__close {
-      border: 1.5px solid rgba(240,239,228,0.28); background: transparent; color: #F0EFE4; padding: 12px 22px;
-    }
-    .req__ok { margin: 8px 0 0; color: #E6E1D0; }
-    .req__ok a { color: #C4A35A; }
-    .wa {
-      position: fixed;
-      right: max(16px, env(safe-area-inset-right));
-      bottom: calc(20px + env(safe-area-inset-bottom));
-      z-index: 55;
-      min-height: 48px;
-      padding: 12px 18px;
-      border-radius: 999px;
-      background: #F0EFE4;
-      color: #00444D;
-      font: 700 0.76rem/1 Barlow, Helvetica, sans-serif;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 10px 28px rgba(0,0,0,0.28);
-    }
-    .wa svg { width: 18px; height: 18px; display: block; }
-    .req__wa {
-      display: inline-flex; align-items: center; justify-content: center;
-      min-height: 44px; border-radius: 999px;
-      background: #F0EFE4; color: #00444D;
-      text-decoration: none; font: 600 0.95rem/1 Barlow, sans-serif;
-      padding: 12px 22px; letter-spacing: 0.06em;
-    }
-    @media (min-width: 720px) {
-      .req { place-items: center; }
-      .req__panel { border-radius: 20px; padding: 32px; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <a class="skip" href="#request">Skip to cabin request</a>
-  <a class="wa" id="wa-fab" href="https://wa.me/14377702030?text=Hi%20Maaz%20%E2%80%94%20I%20want%20to%20book%20a%20Vietnam%202027%20cabin." target="_blank" rel="noopener noreferrer">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#25D366" d="M20.5 3.5A11 11 0 0 0 2.1 17.2L1 23l5.9-1.1A11 11 0 0 0 12 23a11 11 0 0 0 8.5-19.5zM12 21a9 9 0 0 1-4.6-1.3l-.3-.2-3.5.7.7-3.4-.2-.3A9 9 0 1 1 12 21zm5-6.7c-.3-.1-1.6-.8-1.9-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.4 7.4 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5.1-.3c0-.1 0-.3 0-.4s-.6-1.5-.8-2-.4-.5-.6-.5h-.5c-.2 0-.4.1-.6.3s-.8.8-.8 1.9.8 2.2.9 2.3 1.6 2.5 3.9 3.5c.5.2 1 .4 1.3.5.6.2 1.1.2 1.5.1.5-.1 1.6-.6 1.8-1.3s.2-1.1.2-1.2-.2-.2-.4-.3z"/></svg>
-    Book on WhatsApp
-  </a>
-  <div id="top"></div>
-  <main id="world"></main>
+  <a class="skip-link" href="#packages">Skip to vacation packages</a>
+  <div class="announcement"><p>Toronto <span aria-hidden="true">→</span> your next all-inclusive escape</p><a href="#inquire">Talk to a travel advisor</a></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="AMAX Vacations home"><img src="assets/logo/logo-mark.png" alt="" width="48" height="48" /><span><b>AMAX</b><em>Vacations</em></span></a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr-only">Open menu</span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation"><a href="#destinations">Destinations</a><a href="#packages">Packages</a><a href="#why-amax">Why AMAX</a><a href="#inquire">Contact</a></nav>
+    <a class="header-cta" href="#trip-finder">Build my trip</a>
+  </header>
 
-  <div class="req" id="request" hidden>
-    <button class="req__scrim" type="button" aria-label="Close request form"></button>
-    <div class="req__panel" role="dialog" aria-modal="true" aria-labelledby="req-title">
-      <h2 id="req-title">Request the first cabin</h2>
-      <p class="req__lede">Vietnam, January–February 2027. Ban Gioc, Con Dao, Phu Quoc. Ask Maaz about the premium discounted package before it sells out.</p>
-      <form id="req-form" novalidate>
-        <div class="req__field">
-          <label for="req-name">Name</label>
-          <input id="req-name" name="name" autocomplete="name" required />
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-image" src="assets/campaign/amax-hero.jpg" alt="Friends arriving at a tropical beach resort at sunset" width="1672" height="941" fetchpriority="high" />
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <h1 id="hero-title">Go where the feeling takes you.</h1>
+        <p>Curated all-inclusive escapes, standout resorts and a real travel advisor when you are ready.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#packages">Explore packages</a><a class="text-link" href="https://wa.me/14377702030?text=Hi%20AMAX%20Vacations%20%E2%80%94%20help%20me%20find%20an%20all-inclusive%20package." target="_blank" rel="noopener noreferrer">Start on WhatsApp <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+
+    <form class="trip-finder" id="trip-finder" aria-label="Find a vacation package">
+      <div class="finder-field"><label for="departure">From</label><select id="departure" name="departure"><option>Toronto (YYZ)</option></select></div>
+      <div class="finder-field"><label for="destination">Destination</label><select id="destination" name="destination"><option value="all">Anywhere warm</option><option value="mexico">Mexico</option><option value="dominican">Dominican Republic</option><option value="cuba">Cuba</option><option value="jamaica">Jamaica</option></select></div>
+      <div class="finder-field"><label for="travel-month">Travel month</label><select id="travel-month" name="month"><option>Flexible dates</option><option>November 2026</option><option>December 2026</option><option>January 2027</option><option>February 2027</option></select></div>
+      <div class="finder-field"><label for="travellers">Travellers</label><select id="travellers" name="travellers"><option>2 adults</option><option>1 adult</option><option>2 adults, 1 child</option><option>2 adults, 2 children</option><option>Group of 5+</option></select></div>
+      <button class="button button-primary finder-submit" type="submit">Show me the trips</button>
+    </form>
+
+    <section class="spotlight section" aria-labelledby="spotlight-title">
+      <div class="spotlight-art">
+        <img src="assets/packages/hm-alma-de-bayahibe/exterior-aerial.jpg" alt="Aerial view of HM Alma de Bayahibe and its oceanfront pools" width="1067" height="600" />
+        <div class="discount-burst"><strong>23%</strong><span>off</span></div>
+        <p>AMAX deal spotlight · 4 property photos</p>
+      </div>
+      <div class="spotlight-copy">
+        <div class="deal-status"><span>Limited supplier deal</span><span>Toronto departure</span></div>
+        <h2 id="spotlight-title">HM Alma de Bayahibe</h2>
+        <p class="spotlight-place">La Romana, Dominican Republic</p>
+        <ul class="deal-inclusions" aria-label="Package inclusions">
+          <li>7 days all-inclusive</li><li>Flight + hotel + transfers</li><li>First checked bag included</li>
+        </ul>
+        <div class="deal-pricing">
+          <div><small>Was</small><del>$1,685</del></div>
+          <div class="deal-now"><small>Now from</small><strong>$1,295</strong><span>per adult</span></div>
+          <div class="deal-save"><small>You save</small><strong>$390</strong><span>per adult</span></div>
         </div>
-        <div class="req__field">
-          <label for="req-email">Email</label>
-          <input id="req-email" name="email" type="email" autocomplete="email" inputmode="email" required />
-        </div>
-        <div class="req__row">
-          <div class="req__field">
-            <label for="req-party">Travelers</label>
-            <input id="req-party" name="party" type="number" min="1" max="40" value="2" inputmode="numeric" />
-          </div>
-          <div class="req__field">
-            <label for="req-dates">Preferred dates</label>
-            <input id="req-dates" name="dates" autocomplete="off" placeholder="Jan 2027" />
-          </div>
-        </div>
-        <div class="req__field">
-          <label for="req-note">Anything we should know</label>
-          <textarea id="req-note" name="note" rows="3"></textarea>
-        </div>
-        <p class="req__error" id="req-error" role="alert"></p>
-        <div class="req__actions">
-          <button class="req__submit" type="submit">Send request</button>
-          <a class="req__wa" id="req-wa" href="https://wa.me/14377702030?text=Hi%20Maaz%20%E2%80%94%20I%20want%20to%20book%20a%20Vietnam%202027%20cabin." target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          <button class="req__close" type="button">Cancel</button>
-        </div>
-        <p class="req__ok" id="req-ok" hidden>If your mail app did not open, write <a href="mailto:info@amaxtravel.ca">info@amaxtravel.ca</a>.</p>
+        <div class="deal-date"><span>Tue, Nov 24</span><i aria-hidden="true"></i><span>Tue, Dec 1</span></div>
+        <div class="deal-actions"><button class="button button-primary spotlight-inquire" type="button">Claim this deal</button><button class="text-link spotlight-details" type="button">See package details <span aria-hidden="true">→</span></button></div>
+        <p class="deal-disclaimer">Supplier-price snapshot supplied for this campaign. Taxes and fees shown as included. Availability and final price must be reconfirmed by AMAX before booking.</p>
+      </div>
+    </section>
+
+    <section class="destinations section" id="destinations" aria-labelledby="destinations-title">
+      <div class="section-heading"><h2 id="destinations-title">Start with a country. We’ll handle the shortlist.</h2><p>Browse the places travellers ask us about most, then open a package preview to see what your trip could include.</p></div>
+      <div class="destination-grid" role="list">
+        <button class="destination-card destination-card-large" type="button" data-filter="mexico" role="listitem"><img src="assets/campaign/mexico.jpg" alt="Turquoise cenote and coastline in Mexico" width="627" height="627" loading="lazy" /><span class="destination-overlay"></span><span class="destination-copy"><b>Mexico</b><small>Riviera Maya · Cancún · Puerto Vallarta</small></span><span class="destination-count">2 package previews</span></button>
+        <button class="destination-card" type="button" data-filter="dominican" role="listitem"><img src="assets/campaign/dominican-republic.jpg" alt="Palm-lined beach resort in the Dominican Republic" width="627" height="627" loading="lazy" /><span class="destination-overlay"></span><span class="destination-copy"><b>Dominican Republic</b><small>Punta Cana · Puerto Plata</small></span><span class="destination-count">2 package previews</span></button>
+        <button class="destination-card" type="button" data-filter="cuba" role="listitem"><img src="assets/campaign/cuba.jpg" alt="Colourful Havana street leading toward the sea" width="627" height="627" loading="lazy" /><span class="destination-overlay"></span><span class="destination-copy"><b>Cuba</b><small>Varadero · Cayo Coco</small></span><span class="destination-count">2 package previews</span></button>
+        <button class="destination-card destination-card-wide" type="button" data-filter="jamaica" role="listitem"><img src="assets/campaign/jamaica.jpg" alt="Clear-water cove and beach club in Jamaica" width="627" height="627" loading="lazy" /><span class="destination-overlay"></span><span class="destination-copy"><b>Jamaica</b><small>Montego Bay · Negril</small></span><span class="destination-count">2 package previews</span></button>
+      </div>
+    </section>
+
+    <section class="packages section" id="packages" aria-labelledby="packages-title">
+      <div class="package-intro"><div class="section-heading"><h2 id="packages-title">Package ideas worth asking about.</h2><p>These previews show the trip format. Your AMAX advisor confirms the current supplier, hotel, dates, inclusions and final price before you book.</p></div>
+        <div class="filter-row" role="group" aria-label="Filter packages by destination"><button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">All packages</button><button class="filter-chip" type="button" data-filter="mexico" aria-pressed="false">Mexico</button><button class="filter-chip" type="button" data-filter="dominican" aria-pressed="false">Dominican Republic</button><button class="filter-chip" type="button" data-filter="cuba" aria-pressed="false">Cuba</button><button class="filter-chip" type="button" data-filter="jamaica" aria-pressed="false">Jamaica</button></div>
+      </div>
+      <div class="package-grid" id="package-grid">
+        <article class="package-card" data-country="mexico" data-title="Riviera Maya Beach Week" data-place="Riviera Maya, Mexico" data-image="assets/packages/riviera-maya/riviera-maya-beach-week-v1.png" data-style="Beachfront all-inclusive" data-duration="7 nights" data-best="Couples · Friends" data-description="A relaxed Riviera Maya base with the option to balance resort days, cenotes and a night in Playa del Carmen."><div class="package-media"><img src="assets/packages/riviera-maya/riviera-maya-beach-week-v1.png" alt="Turquoise Riviera Maya coastline, beach resort and natural swimming cove at sunset" width="1536" height="1024" loading="lazy" /><span class="package-brand" aria-label="AMAX Vacations"><img src="assets/logo/logo-mark.png" alt="" width="34" height="34" /><span><b>AMAX</b><small>Vacations</small></span></span></div><div class="package-body"><div class="package-meta"><span>Mexico</span><span>7 nights</span></div><h3>Riviera Maya Beach Week</h3><p>Beachfront all-inclusive · Departing Toronto</p><div class="package-foot"><span><small>Current rate</small>Ask AMAX</span><button type="button" class="details-button">View details</button></div></div></article>
+        <article class="package-card" data-country="mexico" data-title="Cancún After Dark" data-place="Cancún, Mexico" data-image="assets/campaign/mexico.jpg" data-style="Adults-focused all-inclusive" data-duration="7 nights" data-best="Couples · Friends" data-description="A higher-energy escape for travellers who want resort downtime, dining and easy access to Cancún nightlife."><img src="assets/campaign/mexico.jpg" alt="Tropical coastline in Mexico" width="627" height="627" loading="lazy" /><div class="package-body"><div class="package-meta"><span>Mexico</span><span>7 nights</span></div><h3>Cancún After Dark</h3><p>Adults-focused all-inclusive · Departing Toronto</p><div class="package-foot"><span><small>Current rate</small>Ask AMAX</span><button type="button" class="details-button">View details</button></div></div></article>
+        <article class="package-card" data-country="dominican" data-title="Punta Cana Easy Escape" data-place="Punta Cana, Dominican Republic" data-image="assets/campaign/dominican-republic.jpg" data-style="Beach resort all-inclusive" data-duration="7 nights" data-best="Families · Couples" data-description="A simple sun-first week with a broad resort shortlist, airport transfers and family or adults-focused options."><img src="assets/campaign/dominican-republic.jpg" alt="Palm beach resort in the Dominican Republic" width="627" height="627" loading="lazy" /><div class="package-body"><div class="package-meta"><span>Dominican Republic</span><span>7 nights</span></div><h3>Punta Cana Easy Escape</h3><p>Beach resort all-inclusive · Departing Toronto</p><div class="package-foot"><span><small>Current rate</small>Ask AMAX</span><button type="button" class="details-button">View details</button></div></div></article>
+        <article class="package-card" data-country="dominican" data-title="Puerto Plata Value Week" data-place="Puerto Plata, Dominican Republic" data-image="assets/campaign/dominican-republic.jpg" data-style="Value-led all-inclusive" data-duration="7 nights" data-best="Families · Groups" data-description="A value-led package format with beach time, resort entertainment and room options for different group sizes."><img src="assets/campaign/dominican-republic.jpg" alt="Tropical Dominican beach with palms" width="627" height="627" loading="lazy" /><div class="package-body"><div class="package-meta"><span>Dominican Republic</span><span>7 nights</span></div><h3>Puerto Plata Value Week</h3><p>Value-led all-inclusive · Departing Toronto</p><div class="package-foot"><span><small>Current rate</small>Ask AMAX</span><button type="button" class="details-button">View details</button></div></div></article>
+        <article class="package-card" data-country="cuba" data-title="Varadero Classic" data-place="Varadero, Cuba" data-image="assets/campaign/cuba.jpg" data-style="Beach all-inclusive" data-duration="7 nights" data-best="Couples · Families" data-description="A classic white-sand vacation with a straightforward resort stay and the option to add a Havana day experience."><img src="assets/campaign/cuba.jpg" alt="Colourful Cuban street near the ocean" width="627" height="627" loading="lazy" /><div class="package-body"><div class="package-meta"><span>Cuba</span><span>7 nights</span></div><h3>Varadero Classic</h3><p>Beach all-inclusive · Departing Toronto</p><div class="package-foot"><span><small>Current rate</small>Ask AMAX</span><button type="button" class="details-button">View details</button></div></div></article>
+        <article class="package-card" data-country="cuba" data-title="Cayo Coco Quiet Coast" data-place="Cayo Coco, Cuba" data-image="assets/campaign/cuba.jpg" data-style="Relaxed all-inclusive" data-duration="7 nights" data-best="Couples · Quiet escapes" data-description="A slower island-style week built around long beach days, a relaxed resort atmosphere and uncomplicated planning."><img src="assets/campaign/cuba.jpg" alt="Cuban coastal scene" width="627" height="627" loading="lazy" /><div class="package-body"><div class="package-meta"><span>Cuba</span><span>7 nights</span></div><h3>Cayo Coco Quiet Coast</h3><p>Relaxed all-inclusive · Departing Toronto</p><div class="package-foot"><span><small>Current rate</small>Ask AMAX</span><button type="button" class="details-button">View details</button></div></div></article>
+        <article class="package-card" data-country="jamaica" data-title="Montego Bay Social" data-place="Montego Bay, Jamaica" data-image="assets/campaign/jamaica.jpg" data-style="Lively all-inclusive" data-duration="7 nights" data-best="Friends · Couples" data-description="A social resort week with warm water, easy excursions and options for travellers who want energy after sunset."><img src="assets/campaign/jamaica.jpg" alt="Jamaican cove and beach club" width="627" height="627" loading="lazy" /><div class="package-body"><div class="package-meta"><span>Jamaica</span><span>7 nights</span></div><h3>Montego Bay Social</h3><p>Lively all-inclusive · Departing Toronto</p><div class="package-foot"><span><small>Current rate</small>Ask AMAX</span><button type="button" class="details-button">View details</button></div></div></article>
+        <article class="package-card" data-country="jamaica" data-title="Negril Slow Days" data-place="Negril, Jamaica" data-image="assets/campaign/jamaica.jpg" data-style="Boutique beach escape" data-duration="7 nights" data-best="Couples · Friends" data-description="A beach-forward Negril stay for travellers who care more about sunsets, swimming and local rhythm than a packed schedule."><img src="assets/campaign/jamaica.jpg" alt="Clear-water cliffside cove in Jamaica" width="627" height="627" loading="lazy" /><div class="package-body"><div class="package-meta"><span>Jamaica</span><span>7 nights</span></div><h3>Negril Slow Days</h3><p>Boutique beach escape · Departing Toronto</p><div class="package-foot"><span><small>Current rate</small>Ask AMAX</span><button type="button" class="details-button">View details</button></div></div></article>
+      </div>
+      <p class="inventory-note">Package names are draft collection concepts. Availability, property, supplier, inclusions and price are confirmed by an AMAX travel advisor.</p>
+    </section>
+
+    <section class="included" id="why-amax" aria-labelledby="included-title">
+      <div class="included-copy"><h2 id="included-title">Less vacation math. More human help.</h2><p>Tell us what kind of week you want. We’ll use current supplier options to narrow the search, explain the trade-offs and follow up with the packages that fit.</p><a class="button button-light" href="#inquire">Ask AMAX to shortlist it</a></div>
+      <ul class="included-list">
+        <li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 11h18M5 16h14M7 6h10" /></svg></span><div><b>One useful shortlist</b><small>Country, dates and traveller mix first.</small></div></li>
+        <li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 16 0 8 8 0 1 0-16 0m8-4v4l3 2" /></svg></span><div><b>Current details</b><small>Price and availability confirmed before booking.</small></div></li>
+        <li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h14v12H9l-4 4V4Z" /></svg></span><div><b>A real follow-up</b><small>Continue by WhatsApp, email or phone.</small></div></li>
+      </ul>
+    </section>
+
+    <section class="vietnam-feature" aria-labelledby="vietnam-title"><img src="assets/05-the-night.jpg" alt="Night coastline in Vietnam" width="1200" height="675" loading="lazy" /><div><h2 id="vietnam-title">Looking beyond the all-inclusive?</h2><p>Vietnam 2027 is AMAX’s first cinematic itinerary concept—Ban Gioc, Con Dao, Sapa and Phu Quoc in one extraordinary route.</p><button class="text-link vietnam-interest" type="button">Ask about Vietnam 2027 <span aria-hidden="true">→</span></button></div></section>
+
+    <section class="inquiry section" id="inquire" aria-labelledby="inquiry-title">
+      <div class="inquiry-copy"><h2 id="inquiry-title">Tell us where you want to wake up.</h2><p>Share the basics and an AMAX travel advisor will follow up to confirm the latest matching options.</p><div class="contact-method"><span>Prefer WhatsApp?</span><a href="https://wa.me/14377702030?text=Hi%20AMAX%20Vacations%20%E2%80%94%20I%20would%20like%20help%20finding%20a%20vacation%20package." target="_blank" rel="noopener noreferrer">Message +1 437 770 2030 <span aria-hidden="true">↗</span></a></div></div>
+      <form class="lead-form" id="lead-form" novalidate>
+        <div class="field-pair"><div class="field"><label for="name">Name <span aria-hidden="true">*</span></label><input id="name" name="name" autocomplete="name" required /></div><div class="field"><label for="phone">Phone <span aria-hidden="true">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required /></div></div>
+        <div class="field"><label for="email">Email <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" inputmode="email" required /></div>
+        <div class="field"><label for="interest">Destination interest <span aria-hidden="true">*</span></label><select id="interest" name="interest" required><option value="">Choose a destination</option><option>Mexico</option><option>Dominican Republic</option><option>Cuba</option><option>Jamaica</option><option>Vietnam 2027</option><option>Help me decide</option></select></div>
+        <div class="field"><label for="notes">What would make this trip right?</label><textarea id="notes" name="notes" rows="3" placeholder="Dates, travellers, budget range or the kind of trip you want"></textarea></div>
+        <p class="form-error" id="form-error" role="alert"></p><p class="form-status" id="form-status" aria-live="polite"></p>
+        <button class="button button-primary" type="submit">Request my shortlist</button><small class="privacy-note">This draft opens your email app with the enquiry details. No form data is stored on this website.</small>
       </form>
-    </div>
-  </div>
+    </section>
+  </main>
 
-  <script src="scrub-engine.js"></script>
-  <script>
-    const WA_HREF = 'https://wa.me/14377702030?text=' + encodeURIComponent(
-      'Hi Maaz — I\'m interested in the Vietnam 2027 premium discounted package before it sells out.\n\n' +
-      'Inquiry Form:\n' +
-      '1. We are XX number of travelers — X Adult, X Child\n' +
-      '2. My preferred travel dates are Jan/Feb XX\n' +
-      '3. Ban Gioc, Con Dao, Phu Quoc, or the full route?\n' +
-      '4. You should also know?\n'
-    );
-    function bindWhatsApp(el) {
-      if (!el) return;
-      el.href = WA_HREF;
-      el.target = '_blank';
-      el.rel = 'noopener noreferrer';
-    }
-    bindWhatsApp(document.getElementById('wa-fab'));
-    bindWhatsApp(document.getElementById('req-wa'));
+  <dialog class="package-dialog" id="package-dialog" aria-labelledby="dialog-title"><button class="dialog-close" type="button" aria-label="Close package details"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg></button><div class="dialog-gallery"><img id="dialog-image" src="assets/campaign/mexico.jpg" alt="" width="627" height="627" /><div class="dialog-thumbnails" id="dialog-thumbnails" aria-label="Property photo gallery" hidden></div></div><div class="dialog-content"><p class="dialog-place" id="dialog-place"></p><h2 id="dialog-title"></h2><p id="dialog-description"></p><dl><div><dt>Trip style</dt><dd id="dialog-style"></dd></div><div><dt>Duration</dt><dd id="dialog-duration"></dd></div><div><dt>Good for</dt><dd id="dialog-best"></dd></div><div><dt>Price</dt><dd>Confirmed with current supplier options</dd></div></dl><p class="dialog-note">Flights, hotel, transfers, meals and other inclusions vary by selected supplier and property.</p><button class="button button-primary dialog-inquire" type="button">Request this package</button></div></dialog>
 
-    function syncWaFab() {
-      const fab = document.getElementById('wa-fab');
-      if (!fab) return;
-      const last = document.querySelector('.sw-copy:last-child');
-      const onLast = last && parseFloat(getComputedStyle(last).opacity || '0') > 0.4;
-      const sheetOpen = document.getElementById('request') && !document.getElementById('request').hidden;
-      fab.style.visibility = (onLast || sheetOpen) ? 'hidden' : 'visible';
-    }
-    window.addEventListener('scroll', () => { requestAnimationFrame(syncWaFab); }, { passive: true });
-    setInterval(syncWaFab, 400);
-
-    mountScrollWorld(document.getElementById('world'), {
-      brand: { name: 'AMAX VACATIONS', href: '#top' },
-      hint: 'scroll to fly in',
-      diveScroll: 2.1,
-      connScroll: 0.8,
-      crossfade: 0.26,
-      atmosphere: false,
-      nav: true,
-      sections: [
-        {
-          id: 'land',
-          label: 'The Green',
-          still: 'assets/01-the-land.jpg?v=fly',
-          clip: 'assets/vid/01-the-land.mp4?v=fly',
-          accent: '#C4A35A',
-          scroll: 2.6,
-          linger: 0,
-          title: 'With me now.',
-          body: 'Follow me for a virtual journey through Vietnam.',
-          tags: ['Cao Bang'],
-        },
-        {
-          id: 'climb',
-          label: 'The Climb',
-          still: 'assets/02-the-coast.jpg?v=ridge',
-          clip: 'assets/vid/02-the-coast.mp4?v=ridge',
-          accent: '#C4A35A',
-          scroll: 2.6,
-          linger: 0,
-          title: 'Up the mountain.',
-          body: 'Con Dao ridge. Keep scrolling. Keep climbing.',
-          tags: ['Con Dao'],
-        },
-        {
-          id: 'summit',
-          label: 'The Summit',
-          still: 'assets/06-the-summit.jpg?v=fly',
-          clip: 'assets/vid/06-the-summit.mp4?v=fly',
-          accent: '#C4A35A',
-          scroll: 2.4,
-          linger: 0.28,
-          title: 'Reach the top.',
-          body: 'Sapa. You arrive. The country opens.',
-          tags: ['Sapa'],
-        },
-        {
-          id: 'house',
-          label: 'The Ride',
-          still: 'assets/03-the-house.jpg?v=red',
-          clip: 'assets/vid/03-the-house.mp4?v=red',
-          accent: '#C4A35A',
-          scroll: 6.8,
-          linger: 0,
-          title: 'Brace yourself for the ride.',
-          body: 'A drone POV through Phu Quoc.',
-          tags: ['Phu Quoc'],
-        },
-        {
-          id: 'invite',
-          label: 'The Night',
-          still: 'assets/05-the-night.jpg?v=clouds3',
-          clip: 'assets/vid/05-the-night.mp4?v=clouds3',
-          accent: '#C4A35A',
-          scroll: 5.2,
-          linger: 0.38,
-          title: 'Enjoy the breathtaking views.',
-          body: 'Act now — before we sell out of this premium discounted package.',
-          tags: ['Jan–Feb 2027'],
-          cta: {
-            primary: { label: 'BOOK ON WHATSAPP', href: WA_HREF }
-          }
-        },
-      ],
-      connectors: [],
-    });
-
-    document.querySelectorAll('a[href^="https://wa.me/"]').forEach(bindWhatsApp);
-
-    const brand = document.querySelector('.sw-brand');
-    if (brand) {
-      brand.setAttribute('aria-label', 'AMAX Vacations');
-      brand.replaceChildren();
-      const img = document.createElement('img');
-      img.className = 'sw-logo';
-      img.src = 'assets/logo/logo-mark.png?v=lux1';
-      img.alt = '';
-      img.width = 34;
-      img.height = 34;
-      const lockup = document.createElement('span');
-      lockup.className = 'sw-brand__lockup';
-      lockup.setAttribute('aria-hidden', 'true');
-      lockup.innerHTML = '<span class="sw-brand__amax">AMAX</span><span class="sw-brand__vac">Vacations</span>';
-      brand.append(img, lockup);
-    }
-
-    document.querySelectorAll('.sw-copy__tags li').forEach((li) => {
-      if (/^\d{1,2}:\d{2}$/.test((li.textContent || '').trim())) li.remove();
-    });
-    const hint = document.querySelector('.sw-hint span');
-    if (hint && window.matchMedia('(hover: none) and (pointer: coarse)').matches) {
-      hint.textContent = 'swipe to fly in';
-    }
-
-    const sheet = document.getElementById('request');
-    const form = document.getElementById('req-form');
-    const err = document.getElementById('req-error');
-    const ok = document.getElementById('req-ok');
-    const firstField = document.getElementById('req-name');
-    const closers = sheet.querySelectorAll('.req__close, .req__scrim');
-    let lastFocus = null;
-
-    function focusables() {
-      return [...sheet.querySelectorAll('a[href], button, input, textarea, select')].filter((el) => !el.disabled && !el.hidden);
-    }
-    function openRequest() {
-      lastFocus = document.activeElement;
-      sheet.hidden = false;
-      document.body.style.overflow = 'hidden';
-      const world = document.getElementById('world');
-      if (world) world.setAttribute('aria-hidden', 'true');
-      firstField.focus();
-    }
-    function closeRequest() {
-      sheet.hidden = true;
-      document.body.style.overflow = '';
-      const world = document.getElementById('world');
-      if (world) world.removeAttribute('aria-hidden');
-      if (lastFocus && lastFocus.focus) lastFocus.focus();
-    }
-    function isRequestHash() {
-      return (location.hash || '') === '#request';
-    }
-
-    document.addEventListener('click', (e) => {
-      const a = e.target.closest('a[href="#request"]');
-      if (!a) return;
-      e.preventDefault();
-      history.replaceState(null, '', '#request');
-      openRequest();
-    });
-    closers.forEach((el) => el.addEventListener('click', () => {
-      if (isRequestHash()) history.replaceState(null, '', '#top');
-      closeRequest();
-    }));
-    document.addEventListener('keydown', (e) => {
-      if (sheet.hidden) return;
-      if (e.key === 'Escape') {
-        if (isRequestHash()) history.replaceState(null, '', '#top');
-        closeRequest();
-        return;
-      }
-      if (e.key !== 'Tab') return;
-      const list = focusables();
-      if (!list.length) return;
-      const first = list[0];
-      const last = list[list.length - 1];
-      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
-    });
-    window.addEventListener('hashchange', () => {
-      if (isRequestHash()) openRequest();
-      else if (!sheet.hidden) closeRequest();
-    });
-    if (isRequestHash()) openRequest();
-
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      err.textContent = '';
-      ok.hidden = true;
-      const name = document.getElementById('req-name').value.trim();
-      const email = document.getElementById('req-email').value.trim();
-      const party = document.getElementById('req-party').value.trim() || '2';
-      const dates = document.getElementById('req-dates').value.trim() || 'January–February 2027';
-      const note = document.getElementById('req-note').value.trim();
-      if (!name) { err.textContent = 'Add your name so we know who to write back.'; firstField.focus(); return; }
-      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        err.textContent = 'Add a working email so we can confirm the cabin.';
-        document.getElementById('req-email').focus();
-        return;
-      }
-      const body = [
-        'Vietnam 2027 cabin request',
-        'Name: ' + name,
-        'Email: ' + email,
-        'Travelers: ' + party,
-        'Dates: ' + dates,
-        note ? 'Note: ' + note : ''
-      ].filter(Boolean).join('\n');
-      const href = 'mailto:info@amaxtravel.ca?subject=' +
-        encodeURIComponent('Vietnam 2027 cabin request — ' + name) +
-        '&body=' + encodeURIComponent(body);
-      const btn = form.querySelector('.req__submit');
-      btn.disabled = true;
-      window.location.href = href;
-      ok.hidden = false;
-      setTimeout(() => { btn.disabled = false; }, 1200);
-    });
-  </script>
+  <footer class="site-footer"><a class="brand footer-brand" href="#top" aria-label="AMAX Vacations home"><img src="assets/logo/logo-mark.png" alt="" width="48" height="48" /><span><b>AMAX</b><em>Vacations</em></span></a><p>Vacation ideas from Toronto, shaped around you.</p><div class="footer-links"><a href="mailto:info@amaxtravel.ca">info@amaxtravel.ca</a><a href="tel:+14377702030">+1 437 770 2030</a><a href="#inquire">Plan a trip</a></div><small>Package details and prices are subject to supplier availability and confirmation. This website is an enquiry experience and does not process bookings or payments.</small></footer>
+  <script src="app.js"></script>
 </body>
 </html>

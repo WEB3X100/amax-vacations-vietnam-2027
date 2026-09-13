@@ -1,11 +1,13 @@
-# AMAX Vacations — Vietnam 2027
+# AMAX Vacations — Landing Page Versions
 
-Finished static landing. `index.html` is the site.
+The `main` branch preserves the original Vietnam 2027 cinematic landing page.
 
-**Replit: import this repo and deploy as static. Do not rewrite, restyle, add a framework, or generate a starter.**
+The `codex/amax-vacations-collection-landing` branch contains a separate static AMAX Vacations package-catalogue concept: country discovery, package previews, WhatsApp conversion and a lead enquiry form. It intentionally uses no live inventory or checkout engine.
+
+`index.html` is the entry point. No build step is required.
 
 ```bash
 python3 -m http.server 8080
 ```
 
-`.replit` already runs that command. Publish the Repl as a **static** site.
+Open `http://127.0.0.1:8080/` after starting the server.
