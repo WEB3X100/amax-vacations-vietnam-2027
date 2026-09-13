@@ -1,10 +1,13 @@
-run = "python3 -m http.server 8080"
 entrypoint = "index.html"
+run = ["python3", "-m", "http.server", "3000", "--bind", "0.0.0.0"]
 hidden = [".git", "preview", "review.html", "clip-inventory.md"]
 
 [nix]
 channel = "stable-24_05"
 
 [deployment]
-run = ["sh", "-c", "python3 -m http.server 8080"]
 deploymentTarget = "static"
+
+[[ports]]
+localPort = 3000
+externalPort = 80

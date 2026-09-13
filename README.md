@@ -11,3 +11,7 @@ python3 -m http.server 8080
 ```
 
 Open `http://127.0.0.1:8080/` after starting the server.
+
+## Replit
+
+This branch includes a dependency-free `.replit` run command and a step-by-step [Replit import and Static Publishing guide](REPLIT_SETUP.md). No Replit Agent setup, package installation, database, secrets, or build command is required.
