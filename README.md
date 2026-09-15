@@ -2,9 +2,9 @@
 
 The `main` branch preserves the original Vietnam 2027 cinematic landing page.
 
-The `codex/amax-vacations-collection-landing` branch contains a separate static AMAX Vacations package-catalogue concept: country discovery, package previews, WhatsApp conversion and a lead enquiry form. It intentionally uses no live inventory or checkout engine.
+The `codex/amax-vacations-collection-landing` branch contains a separate static AMAX Vacations destination-catalogue concept: six priority destinations, destination filtering, dedicated detail pages and WhatsApp conversion. It intentionally uses no live inventory, checkout engine or build tooling.
 
-`index.html` is the entry point. No build step is required.
+`index.html` is the entry point. The six shareable destination pages live in `destinations/`. No build step is required.
 
 ```bash
 python3 -m http.server 8080

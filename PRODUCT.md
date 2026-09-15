@@ -8,7 +8,7 @@ web
 
 ## Users
 
-Canadian leisure travellers, initially browsing from Toronto, who want an all-inclusive package and prefer to speak with a travel advisor before booking. Their job is to compare destination options, understand the shape of a package, and submit enough information for an AMAX representative to follow up by phone or WhatsApp.
+Canadian leisure travellers who want an all-inclusive package and prefer to speak with a travel advisor before booking. Their job is to compare destination options, understand the shape of a package, and contact an AMAX representative through WhatsApp.
 
 ## Product Purpose
 
@@ -21,7 +21,7 @@ AMAX combines supplier package inventory with human advisor-led follow-up. The w
 ## Operating Context
 
 - Visitors arrive from multi-package campaign ads and browse country collections.
-- Country boxes lead into package details and a shared enquiry flow.
+- Six priority destination cards filter the homepage package ideas and lead into dedicated destination pages.
 - WhatsApp is the fastest initial conversion path.
 - A sales representative follows up by phone to qualify and complete the booking.
 - Live package search through Softvoyage is deferred until traffic justifies the cost.
@@ -29,7 +29,7 @@ AMAX combines supplier package inventory with human advisor-led follow-up. The w
 ## Capabilities and Constraints
 
 - Static HTML, CSS, and JavaScript with no framework or checkout engine.
-- Country filters, package-detail views, WhatsApp conversion, and a lead enquiry form.
+- Destination filters, dedicated destination pages, and WhatsApp conversion.
 - Current prices and supplier availability are not connected; the draft must not fabricate live inventory or guaranteed prices.
 - Supplier-provided Sunwing and Air Transat materials may inform future approved package content, but third-party creative is not bundled into this draft.
 - The existing Vietnam 2027 scroll experience remains preserved on the repository's `main` branch.
