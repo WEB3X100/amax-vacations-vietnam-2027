@@ -88,7 +88,7 @@ components:
 
 AMAX Vacations is a vivid, image-led travel publication with the confidence of a trusted Canadian advisor. Deep teal gives the world authority, warm cream makes it hospitable, and tropical magenta creates the decisive moments that move a traveller from inspiration to conversation. The result should feel youthful and premium, never like a generic discount aggregator.
 
-Photography carries the desire. Editorial serif headlines, generous vertical rhythm, and large scenic crops make each destination feel worth entering; compact sans-serif copy keeps package facts practical. The real AMAX mark appears crisply as an HTML/CSS overlay rather than being baked into destination imagery. Original destination imagery lives under `assets/destinations/`; provenance and creation notes are maintained in `IMAGE-SOURCES.md`.
+Photography carries the desire. Editorial serif headlines, generous vertical rhythm, and large scenic crops make each destination feel worth entering; compact sans-serif copy keeps package facts practical. The official AMAX mark is reserved for navigation and footer identity so destination photography stays clean. Original destination imagery lives under `assets/destinations/`; provenance and creation notes are maintained in `IMAGE-SOURCES.md`.
 
 The interface is a catalogue and advisor handoff, not a booking engine. Destination discovery, honest illustrative pricing, Canada-wide departure language, and repeated WhatsApp actions must remain visually and semantically clear.
 
@@ -154,9 +154,9 @@ The palette balances deep coastal authority with warm editorial paper and one hi
 
 ## Layout
 
-The desktop system uses a centered content width capped at 1240px with at least 24px side clearance and generous fluid section spacing. Homepage content alternates between full-bleed cinematic fields and contained editorial grids. Package discovery uses a seven-item destination control row followed by a three-column card grid; supporting content uses purposeful asymmetric splits rather than a uniform component wall.
+The desktop system uses a centered content width capped at 1240px with at least 24px side clearance and generous fluid section spacing. Homepage content alternates between full-bleed cinematic fields and contained editorial grids. Package discovery uses one prominent text search followed by a three-column card grid; supporting content uses purposeful asymmetric splits rather than a uniform component wall.
 
-At 1060px, the destination control row becomes a horizontally scrollable, snap-aligned rail and packages move to two columns. At 760px, navigation collapses behind the native menu button, package cards become one column, split sections stack, the destination rail retains horizontal momentum, and major CTAs become easier to reach. Side clearance tightens to 20px–22px without eliminating breathing room. Touch targets remain at least 44px.
+At 1060px, packages move to two columns. At 760px, navigation collapses behind the native menu button, package cards become one column, the search remains full-width, split sections stack, and major CTAs become easier to reach. Side clearance tightens to 20px–22px without eliminating breathing room. Touch targets remain at least 44px.
 
 Detail pages follow a consistent journey: immersive hero, raised facts-and-price summary, copy beside a three-image gallery, inclusions, then a full-width WhatsApp inquiry panel. See `destinations/SURFACE.md` for the surface-level contract.
 
@@ -200,10 +200,10 @@ Photography is clipped cleanly into these shapes. Borders are quiet and structur
 
 ### Cards / Containers
 
-- **Destination Filter Tile:** A native `button` combining a 138px scenic crop with a compact label block. The selected state uses `aria-pressed`, a magenta border, and a restrained magenta ring.
+- **Destination Search:** A labelled native search input with clear affordance, live result summary, forgiving keyword matching, keyboard Escape handling, and an honest empty state.
 - **Package Card:** White, 14px corners, broad soft shadow, 1.45:1 image crop, and 22px content padding. Hover lifts the card and zooms the image only slightly.
-- **AMAX Mark Overlay:** A dark-teal translucent pill at the top-left of package imagery with the exact full-colour logo asset and subtle blur. It remains separate from the source image.
 - **Fact Summary:** Warm-cream grid raised across the bottom of a destination hero; facts precede price and the WhatsApp action.
+- **Trust and Contact Block:** A two-part deep-teal and warm-cream section pairing official TICO/IATA badge assets with readable office contact details. Registration claims link to their verification sources; contact methods remain native telephone, email, map, and website links.
 
 ### Navigation
 
@@ -224,12 +224,12 @@ WhatsApp is the dominant action in the header, hero, detail summary, final inqui
 
 - **Do** lead discovery with authentic, geographically coherent destination imagery and meaningful alt text.
 - **Do** source original destination imagery from `assets/destinations/` and maintain provenance in `IMAGE-SOURCES.md`.
-- **Do** preserve the exact AMAX mark as a separate image overlay so it remains crisp and truthful.
-- **Do** use native buttons for filters, native links for navigation, `aria-pressed` for selected filters, visible focus, semantic labels, and 44px minimum targets.
+- **Do** preserve the exact AMAX mark in the navigation and footer so it remains crisp and truthful without obscuring destination photography.
+- **Do** use a native search input for filtering, native links for navigation, visible focus, semantic labels, a clear empty state, and 44px minimum targets.
 - **Do** keep illustrative pricing explicitly qualified as CAD, per person, based on double occupancy, and subject to advisor confirmation.
 - **Do** speak to travellers across Canada and use “major Canadian gateways” when a specific origin is not verified.
 - **Do** lazy-load below-the-fold imagery, provide intrinsic image dimensions, prioritize the hero image, and honor reduced-motion preferences.
-- **Do** preserve the mobile destination rail, single-column package flow, stacked detail content, and accessible mobile menu.
+- **Do** preserve the full-width mobile destination search, single-column package flow, stacked detail content, and accessible mobile menu.
 
 ### Don't:
 

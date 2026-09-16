@@ -21,7 +21,7 @@ AMAX combines supplier package inventory with human advisor-led follow-up. The w
 ## Operating Context
 
 - Visitors arrive from multi-package campaign ads and browse country collections.
-- Six priority destination cards filter the homepage package ideas and lead into dedicated destination pages.
+- One compact destination search filters six homepage package ideas and leads into dedicated destination pages.
 - WhatsApp is the fastest initial conversion path.
 - A sales representative follows up by phone to qualify and complete the booking.
 - Live package search through Softvoyage is deferred until traffic justifies the cost.
@@ -29,7 +29,8 @@ AMAX combines supplier package inventory with human advisor-led follow-up. The w
 ## Capabilities and Constraints
 
 - Static HTML, CSS, and JavaScript with no framework or checkout engine.
-- Destination filters, dedicated destination pages, and WhatsApp conversion.
+- Destination search, dedicated destination pages, and WhatsApp conversion.
+- Trust and contact section with AMAX office details, official website link, TICO registration, and IATA accreditation.
 - Current prices and supplier availability are not connected; the draft must not fabricate live inventory or guaranteed prices.
 - Supplier-provided Sunwing and Air Transat materials may inform future approved package content, but third-party creative is not bundled into this draft.
 - The existing Vietnam 2027 scroll experience remains preserved on the repository's `main` branch.
@@ -47,6 +48,7 @@ AMAX combines supplier package inventory with human advisor-led follow-up. The w
 - User-supplied AMAX visual references in the active design brief.
 - Original AMAX campaign imagery generated for this branch in `assets/campaign/`.
 - Meeting summary confirming the country-package-detail-form flow, WhatsApp conversion, sales follow-up, and deferred live search.
+- AMAX public website and TICO records confirming Amax Travel Services Corp., 2255 Dundas St W, Suite 314, Mississauga, ON L5K 1R6, 416-599-5200, TICO registration #50027257, and AMAX's stated IATA accreditation.
 - No approved supplier package feed, live prices, testimonials, ratings, or booking availability is present in this repository.
 
 ## Product Principles
